@@ -5,8 +5,8 @@ struct student<'a> {
 
 
 fn main() {
-    let n_student_01 = String::from("AreebSiddiqui");
-    let student_01  = n_student_01.split('.')
+    let n1_student_01 = String::from("AreebSiddiqui");
+    let student_01  = n1_student_01.split('.')
     .next()
     .expect("Could not find '.'");
     let my_n_student_01 = student {name: student_01};
