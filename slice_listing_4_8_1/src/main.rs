@@ -1,8 +1,8 @@
 fn main() {
-   let s = String::from ("Hello world");
-   let result = first_word(&s);
-   
-   println!("{:#?}",result);
+   let mut s = String::from ("Hello world");
+   let result = first_word(&s).to_string();
+    s.clear();
+    println!("{:#?}",result);
 }
 
 

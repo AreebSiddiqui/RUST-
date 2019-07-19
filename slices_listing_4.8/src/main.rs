@@ -4,7 +4,7 @@ fn main() {
     let mut s = String::from("Hello world");
     let result = first_word(&s);
     s.clear();
-    println!("result:{}",result);
+    println!("result:{:#?}",result);
 }
 
 
