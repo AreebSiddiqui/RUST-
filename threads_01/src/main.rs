@@ -12,7 +12,7 @@ thread::spawn(||{
 for x in 1..5
 {
     println!("hi number {} from the main thread",x);
-    thread::sleep(Duration::from_secs(2));
+    thread::sleep(Duration::from_secs(3));
 }
 
 }
