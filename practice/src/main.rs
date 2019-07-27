@@ -108,3 +108,12 @@
 //     p.comparsion();
 
 // }
+fn main () {
+    let r:u32;
+    {
+        let x=8;
+       
+    }
+    println!("{}",r);
+
+}
