@@ -108,12 +108,29 @@
 //     p.comparsion();
 
 // }
-fn main () {
-    let r:u32;
-    {
-        let x=8;
+// fn main () {
+//     let r:u32;
+//     {
+//         let x=8;
        
+//     }
+//     println!("{}",r);
+
+// }
+fn main () {
+    let str1 = String::from("Hello, World!");
+    let str2 = "xyz";
+    let result = longest(str1.as_str(),str2);
+    println!("{}",result);
+}
+
+fn longest (x:&str,y:&str) -> &str {
+    if x.len() > y.len() {
+       x 
     }
-    println!("{}",r);
+    else {
+        y
+    }
 
 }
+
