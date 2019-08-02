@@ -134,3 +134,81 @@
 
 // }
 
+// fn main () {
+//     let course = String::from("IOT");
+  
+//     {
+//     let  myname  = String::from("Areeb");
+//         println!("{}",myname);
+
+//     }
+
+//     println!("{}",course);
+// }
+// fn main () {
+//     let x =5;
+//     let y =x;
+//     println!("{}",x);
+//     println!("{}",y);
+
+// }
+// fn main () {
+//     let my_bank_account = String::from("1 million dollars");
+//     let your_bank_account = my_bank_account;
+//     println!("{}",my_bank_account);
+// }
+// fn main () {
+//     let str1 = String::from("hello from main");
+//     another_function(&str1);
+// }
+// fn another_function(x: &String){
+//     x.push_str(" and bye from another fucntion");
+//     println!("{}",x);
+// }
+// fn main () {
+// let my = String::from("Areeb");
+//     let (result1,result2) = cal_len(my);
+//     println!("The lenght of name :{} is {}",result1,result2);
+
+// }
+// fn cal_len(x: String) -> (String,usize)  {
+//         let len = x.len();
+//         (x,len)
+// }
+// fn main () {
+//         let chars = vec!['c','b','z'];
+//         let ints = vec!['1','2','9'];
+        
+//         let result = largest(&chars);
+//         println!("Largest character is :{}",result);
+
+//         let result =largest(&ints);
+//         println!("Largest integer is :{}",result);
+
+// }
+
+// fn largest <T: PartialOrd+ Copy> (list : &[T]) -> T {
+
+//         let mut largest = list[0];
+//         for &n in list.iter() {
+//                 if n >largest {
+//                         largest = n;
+//                 }
+//         }
+//         largest
+// }
+
+// #[derive(Debug)]
+// enum Direction <T> {
+//         north(T),
+//         south(T),
+//         west(T),
+//         east(T),
+// }
+
+// fn main () {
+//         let my_location = Direction::north(5);
+//         println!("My location is {:?} degrees",my_location);
+//         let my_location = Direction::north(String::from("Hey I am in north"));
+//         println!("{:?}",my_location);        
+// }
