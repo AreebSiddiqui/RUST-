@@ -235,25 +235,52 @@
 
 // }
 
+//  #[derive(Debug)]
+// struct Point <T> {
+//         x:T,
+//         y:T,
+// }
+// fn main () {
+//         impl <T> Point <T> {
+//                 fn x(&self) -> &T {
+//                         &self.x
+//                 }               
+//         }
+//         impl Point<f32>{
+//                 fn distance_From_origin (&self) -> f32 {
+//                         (self.x.powi(2)+self.y.powi(2)).sqrt()
+//                 }
+//         }
+//         let v = Point {
+//                 x:4.1,
+//                 y:5.2,
+//         };
+//         println!("{}",v.distance_From_origin());
+// }
+
+
+
+
+
  #[derive(Debug)]
-struct Point <T> {
+struct Point <T,U> {
         x:T,
-        y:T,
+        y:U,
 }
+
 fn main () {
-        impl <T> Point <T> {
-                fn x(&self) -> &T {
-                        &self.x
-                }               
-        }
-        impl Point<f32>{
-                fn distance_From_origin (&self) -> f32 {
-                        (self.x.powi(2)+self.y.powi(2)).sqrt()
+        impl <T,U> Point<T,U>{
+                fn mixup <V,W>(self, other: Point<V,W>) -> Point <U,W>{
+                        Point {
+                                x:self.y,
+                                y:other.y,
+                        }
                 }
-        }
-        let v = Point {
-                x:4.1,
-                y:5.2,
-        };
-        println!("{}",v.distance_From_origin());
+        }           
+
+
+        let o1 = Point {x:4,y:5};
+        let o2 = Point {x:15,y:09};
+        let o3 = o1.mixup(o2);
+        println!("{:#?}",o3);
 }
