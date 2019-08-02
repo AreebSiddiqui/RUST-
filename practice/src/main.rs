@@ -212,3 +212,48 @@
 //         let my_location = Direction::north(String::from("Hey I am in north"));
 //         println!("{:?}",my_location);        
 // }
+
+// #[derive(Debug)]
+// struct Point <T> {
+//         x:T,
+//         y:T,
+// }
+
+// fn main () {
+//         impl <T> Point <T>  {
+//                 fn new (x:T,y:T) -> Self {
+//                         Self{
+//                                 x,
+//                                 y,
+//                         }
+
+//                 }
+//         }
+
+// let v = Point::new(4,5);
+// println!("{:#?}",v);
+
+// }
+
+ #[derive(Debug)]
+struct Point <T> {
+        x:T,
+        y:T,
+}
+fn main () {
+        impl <T> Point <T> {
+                fn x(&self) -> &T {
+                        &self.x
+                }               
+        }
+        impl Point<f32>{
+                fn distance_From_origin (&self) -> f32 {
+                        (self.x.powi(2)+self.y.powi(2)).sqrt()
+                }
+        }
+        let v = Point {
+                x:4.1,
+                y:5.2,
+        };
+        println!("{}",v.distance_From_origin());
+}
