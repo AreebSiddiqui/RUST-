@@ -262,25 +262,143 @@
 
 
 
- #[derive(Debug)]
-struct Point <T,U> {
-        x:T,
-        y:U,
-}
+//  #[derive(Debug)]
+// struct Point <T,U> {
+//         x:T,
+//         y:U,
+// }
 
+// fn main () {
+//         impl <T,U> Point<T,U>{
+//                 fn mixup <V,W>(self, other: Point<V,W>) -> Point <U,W>{
+//                         Point {
+//                                 x:self.y,
+//                                 y:other.y,
+//                         }
+//                 }
+//         }           
+
+
+//         let o1 = Point {x:4,y:5};
+//         let o2 = Point {x:15,y:09};
+//         let o3 = o1.mixup(o2);
+//         println!("{:#?}",o3);
+// }
+
+// fn main () {
+//         let r; 
+//         {
+//                 let x = 5;
+//                  r = &x;
+
+//         }
+//         println!("{:#?}",r);
+
+// }
+// fn main () {
+
+//         let x=5 ;
+//         let r=&x;
+//         println!("{}",r);
+// }
+
+// fn main () {
+//         let name =  String::from ("Areeb");
+//         let another_name = "Siddiqui";
+//         let result = longest (name.as_str(),another_name);
+//         println!("{}",result);
+// }
+
+// fn largest <'a>(x:&'a str,y:&'a str) -> &'a str {
+//         if x.len() > y.len(){
+//                 x
+//         }
+//         else {
+//                 y
+//         }
+
+// }
+// fn longest (x: &str, y: &str) ->  String {
+//     let result = String::from("really long string");
+//     result
+// }
+// #[derive(Debug)]
+// struct ImportantExcerpt<'a> {
+//     part: &'a str,
+// }
+
+// fn main() {
+//     let novel = String::from("Callme IshmaelSomeyearsago");
+//     let first_sentence = novel.split(' ')
+//         .next()
+//         .expect("Could not find a '.'");
+//     let i = ImportantExcerpt { part: first_sentence };
+//     println!("{:#?}",i);
+// }
+
+// #[derive(Debug)]
+// struct ImportantExcerpt<'a> {
+//     part: &'a str,
+// }
+//  fn main () {
+//          impl <'a> ImportantExcerpt <'a> {
+//                  fn new (&self , other: &str) -> &str {
+
+//                          self.part
+//                  }
+//          }
+
+
+
+//          let r = ImportantExcerpt {part : "HEY"};
+//          println!("{}", r.new("hey"));
+//  }
+
+
+use std::fmt::Display;
 fn main () {
-        impl <T,U> Point<T,U>{
-                fn mixup <V,W>(self, other: Point<V,W>) -> Point <U,W>{
-                        Point {
-                                x:self.y,
-                                y:other.y,
-                        }
-                }
-        }           
+ let s1 = "hey";
+ let s2 = "hello";
 
-
-        let o1 = Point {x:4,y:5};
-        let o2 = Point {x:15,y:09};
-        let o3 = o1.mixup(o2);
-        println!("{:#?}",o3);
+ let result = largest (s1,s2,5);
+ println!("{}",result);
 }
+
+fn largest <'a, T> (x: &'a str , y: &'a str, ann: T) -> &'a str
+where T: Display 
+{
+        println!("From ann: {}",ann);
+        if x.len() > y.len() {
+                x
+        }
+        else {
+                y
+        }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// fn main () {
+//         impl <'a> ImportantExcerpt <'a> {
+//                 fn new (&self) -> i32 {
+//                         3
+//                 }
+//         }
+        
+//         let b = ImportantExcerpt {part:"Hey"};
+//         println!("{}",b.new());
+// }
